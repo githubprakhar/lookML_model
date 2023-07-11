@@ -1,0 +1,199 @@
+view: calender_audit_data_looker_admin_console_table {
+  sql_table_name: `calender_audit_data_looker_admin_console.calender_audit_data_looker_admin_console_table`
+    ;;
+
+  dimension: access_level {
+    type: string
+    sql: ${TABLE}.Access_level ;;
+  }
+
+  dimension: actor {
+    type: string
+    sql: ${TABLE}.Actor ;;
+  }
+
+  dimension: api_kind {
+    type: string
+    sql: ${TABLE}.API_kind ;;
+  }
+
+  dimension: appointment_schedule_title {
+    type: string
+    sql: ${TABLE}.Appointment_schedule_title ;;
+  }
+
+  dimension: calendar_id {
+    type: string
+    sql: ${TABLE}.Calendar_ID ;;
+  }
+
+  dimension: client_side_encrypted {
+    type: string
+    sql: ${TABLE}.Client_side_encrypted ;;
+  }
+
+  dimension_group: date {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.Date ;;
+  }
+
+  dimension: description {
+    type: string
+    sql: ${TABLE}.Description ;;
+  }
+
+  dimension: event {
+    type: string
+    sql: ${TABLE}.Event ;;
+  }
+
+  dimension_group: event_end {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.Event_end_time ;;
+  }
+
+  dimension: event_id {
+    type: string
+    sql: ${TABLE}.Event_ID ;;
+  }
+
+  dimension_group: event_start {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.Event_start_time ;;
+  }
+
+  dimension: event_title {
+    type: string
+    sql: ${TABLE}.Event_title ;;
+  }
+
+  dimension: guest_response_status {
+    type: string
+    sql: ${TABLE}.Guest_response_status ;;
+  }
+
+  dimension: interop_error_code {
+    type: string
+    sql: ${TABLE}.Interop_error_code ;;
+  }
+
+  dimension: ip_address {
+    type: string
+    sql: ${TABLE}.IP_address ;;
+  }
+
+  dimension: new_value {
+    type: string
+    sql: ${TABLE}.New_value ;;
+  }
+
+  dimension: notification_message_id {
+    type: string
+    sql: ${TABLE}.Notification_message_ID ;;
+  }
+
+  dimension: notification_method {
+    type: number
+    sql: ${TABLE}.Notification_method ;;
+  }
+
+  dimension: notification_type {
+    type: number
+    sql: ${TABLE}.Notification_type ;;
+  }
+
+  dimension: old_event_title {
+    type: string
+    sql: ${TABLE}.Old_event_title ;;
+  }
+
+  dimension: organizer_calendar_id {
+    type: string
+    sql: ${TABLE}.Organizer_calendar_ID ;;
+  }
+
+  dimension: recurring_event {
+    type: string
+    sql: ${TABLE}.Recurring_Event ;;
+  }
+
+  dimension: remote_exchange_server_url {
+    type: string
+    sql: ${TABLE}.Remote_exchange_server_URL ;;
+  }
+
+  dimension_group: request_period_end {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.Request_period_end_time ;;
+  }
+
+  dimension_group: request_period_start {
+    type: time
+    timeframes: [
+      raw,
+      time,
+      date,
+      week,
+      month,
+      quarter,
+      year
+    ]
+    sql: ${TABLE}.Request_period_start_time ;;
+  }
+
+  dimension: subscriber_calendar_id {
+    type: string
+    sql: ${TABLE}.Subscriber_calendar_ID ;;
+  }
+
+  dimension: target {
+    type: string
+    sql: ${TABLE}.Target ;;
+  }
+
+  dimension: user_agent {
+    type: string
+    sql: ${TABLE}.User_agent ;;
+  }
+
+  measure: count {
+    type: count
+    drill_fields: []
+  }
+}
