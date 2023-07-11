@@ -1,0 +1,13 @@
+connection: "audit-data-looker"
+
+# include all the views
+include: "/views/**/*.view"
+
+datagroup: project-model_default_datagroup {
+  # sql_trigger: SELECT MAX(id) FROM etl_log;;
+  max_cache_age: "1 hour"
+}
+
+persist_with: project-model_default_datagroup
+
+explore: calender_audit_data_looker_admin_console_table {}
